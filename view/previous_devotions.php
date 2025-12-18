@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Previous Devotions - The King's Princess</title>
-<link rel="stylesheet" href="../designs/previous_devotions.css">
+<link rel="stylesheet" href="designs/previous_devotions.css">
 </head>
 <body>
 <?php include __DIR__ . "/features/nav.php"; ?>
