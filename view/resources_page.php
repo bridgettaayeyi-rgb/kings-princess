@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Resources</title>
-    <link rel="stylesheet" href="../designs/resources.css">
+    <link rel="stylesheet" href="designs/resources.css">
 </head>
 <body>
 
