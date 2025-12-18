@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Edit Testimony</title>
-<link rel="stylesheet" href="../designs/prayer.css">
+<link rel="stylesheet" href="designs/prayer.css">
 </head>
 <body>
 <?php require __DIR__ . "/features/nav.php"; ?>
