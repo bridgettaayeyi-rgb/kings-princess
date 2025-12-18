@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../designs/home.css">
+  <link rel="stylesheet" href="designs/home.css">
   <title>The King's Princess</title>
 </head>
 <body>
@@ -97,7 +97,7 @@
       You are seen, loved, and strengthened by God.
   </p>
 </section>
-<script src="../designs/js/counting_home.js"></script>
+<script src="designs/js/counting_home.js"></script>
 <!-- Subscription Section -->
 <section class="subscribe-section">
   <h2>Join Our Princess Fellowship</h2>
