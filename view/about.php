@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>About Us - The King's Princess</title>
-    <link rel="stylesheet" href="/designs/about.css">
+    <link rel="stylesheet" href="designs/about.css">
 </head>
 <body>
 
