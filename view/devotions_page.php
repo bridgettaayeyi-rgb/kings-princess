@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Today's Devotion - The King's Princess</title>
-    <link rel="stylesheet" href="../designs/devotions.css">
+    <link rel="stylesheet" href="designs/devotions.css">
 </head>
 <body>
 <?php require __DIR__ . "/features/nav.php"; ?>
