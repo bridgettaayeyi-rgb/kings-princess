@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>30 Day Challenge - The King's Princess</title>
-<link rel="stylesheet" href="../designs/challenge.css">
+<link rel="stylesheet" href="designs/challenge.css">
 </head>
 <body>
 
