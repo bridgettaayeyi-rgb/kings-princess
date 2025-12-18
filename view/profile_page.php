@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>My Profile</title>
-    <link rel="stylesheet" href="../designs/profile.css">
+    <link rel="stylesheet" href="designs/profile.css">
 </head>
 <body>
 
