@@ -1,0 +1,279 @@
+
+
+/* ---------------------------
+   Base
+   --------------------------- *
+   :root{
+    --bg:#fce4ec;
+    --muted:#7a5a72;
+    --accent:#880e4f;  deep purple 
+    --accent-2:#d81b60;  hot pink 
+    --glass: rgba(255,255,255,0.55);
+    --shadow: 0 10px 30px rgba(106,27,154,0.08);
+  }*/
+  
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: 'Playfair Display', serif;
+    background: #fce4ec;
+    color:#222;
+    padding-bottom:80px;
+  }
+  
+  /* Container (page inner spacing) */
+  .page-title{
+    text-align:center;
+    margin-top:34px;
+    font-size:2.1rem;
+    color:#880e4f; 
+    letter-spacing:0.3px;
+    font-weight:700;
+  }
+  
+  .page-intro{
+    text-align:center;
+    color:#7a5a72;
+    max-width:900px;
+    margin:8px auto 26px;
+    padding:0 16px;
+    font-size:0.98rem;
+  }
+  
+  /* ---------------------------
+     Tabs
+     --------------------------- */
+  .tabs{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    padding: 10px 16px;
+    margin: 18px auto 28px;
+    max-width:1100px;
+  }
+  
+  .tab-btn{
+    background:transparent;
+    border: 1px solid rgba(106,27,154,0.12);
+    padding:8px 18px;
+    border-radius:999px;
+    cursor:pointer;
+    font-weight:600;
+    color:#880e4f; 
+    transition:all .22s ease;
+    box-shadow: 0 4px 12px rgba(106,27,154,0.03);
+  }
+  
+  .tab-btn:hover{
+    transform:translateY(-2px);
+    box-shadow: 0 8px 20px rgba(106,27,154,0.06);
+  }
+  
+  .tab-btn.active{
+    background: linear-gradient(90deg, rgba(106,27,154,0.95), rgba(216,27,96,0.95));
+    color:#fff;
+    border-color: transparent;
+  }
+  
+  /* ---------------------------
+     Tab content / sections
+     --------------------------- */
+  .tab-content{
+    max-width:1100px;
+    margin: 0 auto 40px;
+    padding: 18px;
+    display:none;
+  }
+  
+  .tab-content.active{
+    display:block;
+    animation: fadeIn .22s ease;
+  }
+  
+  .section-desc{
+    color:#7a5a72;
+    margin-bottom:16px;
+    max-width:900px;
+  }
+  
+  /* ---------------------------
+     Resource item (list style)
+     --------------------------- */
+  .resource-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    padding:14px;
+    margin-bottom:12px;
+    border-radius:12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.78));
+    box-shadow: 0 10px 30px rgba(106,27,154,0.08);
+    border: 1px solid rgba(106,27,154,0.06);
+  }
+  
+  .resource-item h4{
+    margin:0;
+    font-size:1rem;
+    color:#2b0b3a;
+    font-weight:700;
+  }
+  
+  .resource-item .meta{
+    color:#7a5a72;
+    font-size:0.88rem;
+    margin:0 10px;
+    white-space:nowrap;
+    opacity:0.95;
+  }
+  
+  /* link button at right */
+  .resource-item a{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:999px;
+    background: transparent;
+    color:#880e4f; 
+    font-weight:700;
+    text-decoration:none;
+    border: 1px solid rgba(106,27,154,0.08);
+    transition: all .18s ease;
+  }
+  
+  .resource-item a:hover{
+    background: linear-gradient(90deg, rgba(106,27,154,0.95), rgba(216,27,96,0.95));
+    color:#fff;
+    transform:translateY(-2px);
+    box-shadow: 0 8px 16px rgba(106,27,154,0.08);
+  }
+  
+  /* ---------------------------
+     Reading / books style (slightly larger)
+     --------------------------- */
+  .reading-item{
+    padding:16px;
+    margin-bottom:12px;
+    border-radius:12px;
+    background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,244,250,0.9));
+    border: 1px solid rgba(106,27,154,0.05);
+    box-shadow: 0 10px 30px rgba(106,27,154,0.08);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+  }
+  
+  .reading-item strong{font-size:1rem; color:#2b0b3a}
+  .reading-item .meta{color:#7a5a72;}
+  
+  /* ---------------------------
+     Link sections (forum & wallpapers)
+     --------------------------- */
+  .primary-btn{
+    display:inline-block;
+    padding:12px 22px;
+    border-radius:30px;
+    background: linear-gradient(90deg, #880e4f , #d81b60);
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    box-shadow: 0 8px 20px rgba(106,27,154,0.12);
+  }
+  
+  /* ---------------------------
+     Small screens
+     --------------------------- */
+  @media (max-width:860px){
+    .resource-item, .reading-item{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:8px;
+    }
+    .resource-item .meta{white-space:normal}
+    .tabs{padding:8px}
+    .page-title{font-size:1.6rem}
+  }
+  
+  /* ---------------------------
+     Utility / animations
+     --------------------------- */
+  @keyframes fadeIn {
+    from{opacity:0; transform: translateY(6px)}
+    to{opacity:1; transform: translateY(0)}
+  }
+  
+/* Nav Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(255, 255, 255, 0.3); /* glass effect */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 9999;
+  }
+
+  nav .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #880e4f; /* rich pink */
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #880e4f;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+
+  /* Hover Effects */
+  nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.6);
+    color: #ad1457;
+  }
+
+  /* Dropdown */
+  nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    display: none;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 6000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 10px;
+  }
+
+  nav ul li:hover ul {
+    display: block;
+  }
+
+  nav ul li ul li {
+    padding: 5px 20px;
+  }
+
+  nav ul li ul li a:hover {
+    background: rgba(255, 192, 203, 0.5);
+    color: #880e4f;
+  }

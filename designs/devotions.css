@@ -1,0 +1,168 @@
+body{
+  background-color: #fce4ec;
+}
+
+/* Devotion Section */
+.devotion-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Title */
+.devotion-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: #880e4f;
+    margin-bottom: 15px;
+}
+
+/* Scripture */
+.scripture {
+    font-size: 1.2rem;
+    color: #ad1457;
+    margin-bottom: 30px;
+}
+
+/* GLASSY CARD SECTIONS */
+.message,
+.application,
+.prayer {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 25px 0;
+    text-align: left;
+
+    /* Subtle rose-gold accents */
+    border: 1px solid rgba(216, 150, 165, 0.35);
+    box-shadow:
+        0 8px 30px rgba(136, 14, 79, 0.15),
+        inset 0 0 0.5px rgba(255, 215, 225, 0.6);
+}
+
+/* Section headings */
+.application h4,
+.prayer h4 {
+    color: #880e4f;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Text inside cards */
+.message p,
+.application p,
+.prayer p {
+    color: #5f2a3c;
+    line-height: 1.7;
+    font-family: 'Playfair Display', serif;
+}
+
+/* BUTTONS */
+.devotion-buttons {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 26px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 205, 215, 0.75),
+        rgba(245, 170, 190, 0.75)
+    );
+    color: #880e4f;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(136, 14, 79, 0.25);
+}
+
+.btn:hover {
+    background: #880e4f;
+    color: #ffffff;
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* Nav Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(255, 255, 255, 0.3); /* glass effect */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 9999;
+  }
+
+  nav .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #880e4f; /* rich pink */
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #880e4f;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+
+  /* Hover Effects */
+  nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.6);
+    color: #ad1457;
+  }
+
+  /* Dropdown */
+  nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    display: none;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 6000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 10px;
+  }
+
+  nav ul li:hover ul {
+    display: block;
+  }
+
+  nav ul li ul li {
+    padding: 5px 20px;
+  }
+
+  nav ul li ul li a:hover {
+    background: rgba(255, 192, 203, 0.5);
+    color: #880e4f;
+  }

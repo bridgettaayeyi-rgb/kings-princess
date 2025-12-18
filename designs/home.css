@@ -1,0 +1,478 @@
+body {
+      background: #fce4ec; /* soft pink background */
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Nav Bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: rgba(255, 255, 255, 0.3); /* glass effect */
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      margin: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      z-index: 9999;
+    }
+
+    nav .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: bold;
+      color: #880e4f; /* rich pink */
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #880e4f;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    /* Hover Effects */
+    nav ul li a:hover {
+      background: rgba(255, 255, 255, 0.6);
+      color: #ad1457;
+    }
+
+    /* Dropdown */
+    nav ul li ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      display: none;
+      padding: 10px 0;
+      min-width: 200px;
+      z-index: 6000;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-top: 10px;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul li {
+      padding: 5px 20px;
+    }
+
+    nav ul li ul li a:hover {
+      background: rgba(255, 192, 203, 0.5);
+      color: #880e4f;
+    }
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh; 
+        position: relative;
+        padding: 20px;
+        z-index: 1 !important;
+      }
+    
+      .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        /*background: linear-gradient(
+            135deg, 
+            rgba(255, 105, 180, 0.4),   /* hot pink 
+            rgba(255, 182, 193, 0.3)    light pink 
+          );
+        backdrop-filter: blur(15px);*/
+        background: url('../designs/images/hero_1.jpg'); 
+        filter: blur(5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        border-radius: 15%; /* oval/ellipse effect */
+        z-index: -1 !important;
+      }
+    
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 600px;
+      }
+    
+      .scripture {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        color: #fce4ec;
+        margin-bottom: 25px;
+        font-weight: bold;
+      }
+    
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+    
+      .btn {
+        text-decoration: none;
+        padding: 12px 25px;
+        background: rgba(255, 192, 203, 0.6); /* soft pink */
+        color: #880e4f;
+        font-weight: bold;
+        border-radius: 25px;
+        transition: 0.3s;
+      }
+    
+      .btn:hover {
+        background: rgba(255, 182, 193, 0.8);
+        color: #ffffff;
+        transform: scale(1.05);
+      }
+
+
+     /* Welcome Heading */
+  .welcome-heading {
+    text-align: center;
+    margin: 40px 0 20px 0;
+  }
+  
+  .welcome-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #880e4f;
+    text-shadow: 1px 1px 3px rgba(255,182,193,0.3);
+  }
+  
+  /* Text + Image Section */
+  .welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  
+  /* Left Text */
+  .welcome-text {
+    flex: 1;
+    font-family: 'Playfair Display', serif;
+    color: #880e4f;
+    line-height: 1.6;
+  }
+  
+  .welcome-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  
+  /* Right Image */
+  .welcome-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .welcome-image img {
+    width: 80%;
+    max-width: 100px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .welcome-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .welcome-image {
+      margin-top: 20px;
+    }
+  }
+
+  /* Text + Image Section */
+.welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  
+  /* Left Text (Centered) */
+  .welcome-text {
+    flex: 1;
+    font-family: 'Playfair Display', serif;
+    color: #880e4f;
+    line-height: 1.6;
+    text-align: left; /* centers the text */
+  }
+  
+  .welcome-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  
+  /* Right Image */
+  .welcome-image {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+  }
+  
+  .welcome-image img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .welcome-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .welcome-image {
+      margin-top: 20px;
+    }
+  }
+  /* 3 Cards Section */
+.three-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 60px auto;
+    max-width: 1100px;
+    padding: 0 20px;
+  }
+  
+  /* Base Card Style */
+  .card {
+    width: 300px;
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    color: white;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+  }
+  
+  .card h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Hover effect */
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  }
+  
+  /* Card Colors (Glassy) */
+  .card-pink {
+    background: rgba(255, 105, 180, 0.35); /* hot pink glass */
+  }
+  
+  .card-purple {
+    background: rgba(155, 89, 182, 0.35); /* purple glass */
+  }
+  
+  .card-blue {
+    background: rgba(25, 80, 180, 0.35); /*  blue glass */
+  }
+  
+  /* Responsive */
+  @media(max-width: 900px) {
+    .three-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 90%;
+    }
+  }
+  /* Clean stat layout */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 40px auto;
+  padding: 10px;
+  max-width: 900px;
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #880e4f;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 8px;
+}
+
+.stat p {
+  font-size: 1.1rem;
+  color: #880e4f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-section {
+      flex-direction: column;
+      gap: 40px;
+  }
+}
+/* Value Proposition Message */
+.value-prop {
+  max-width: 800px;
+  margin: 10px auto 40px auto;
+  padding: 20px 25px;
+  text-align: center;
+}
+
+.value-prop p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #880e4f;
+}
+/* Subscription Section */
+.subscribe-section {
+  text-align: center;
+  margin: 80px auto;
+  padding: 40px 20px;
+  max-width: 700px;
+  color: #880e4f;
+}
+
+.subscribe-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.subscribe-section p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+/* Subscribe Form */
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.subscribe-form input {
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: 1px solid #ffcce0;
+  width: 60%;
+  outline: none;
+  font-size: 1rem;
+}
+
+.subscribe-form button {
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: #e91e63;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subscribe-form button:hover {
+  background: #ad1457;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(to right, #e91e63, #880e4f);
+  color: white;
+  padding: 50px 20px 20px;
+  margin-top: 30px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-logo h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+}
+
+.footer-contact h4,
+.footer-socials h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.footer-contact p,
+.footer-logo p {
+  margin-bottom: 5px;
+}
+
+/* Footer Copyright */
+.footer-copy {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .subscribe-form {
+      flex-direction: column;
+      width: 90%;
+      margin: auto;
+  }
+
+  .subscribe-form input {
+      width: 100%;
+  }
+}
+
+
+ 
+  
+  

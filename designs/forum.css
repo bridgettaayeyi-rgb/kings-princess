@@ -1,0 +1,189 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background: #fce4ec;
+    color: #333;
+    margin: 0;
+    padding: 0 20px;
+    }
+    
+    
+    h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #d6336c; 
+    
+    }
+    
+    p {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 20px;
+    }
+    
+    /* Card style for forms */
+    .post-form, .reply-form {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 30px;
+        background: rgba(255,255,255,0.9);
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    
+    .post-form input[type="text"],
+    .post-form textarea,
+    .reply-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 12px;
+        border: 1px solid rgba(255,105,180,0.5);
+    }
+    
+    /* Buttons */
+    .post-form button,
+    .reply-form button {
+    background-color: #ff80b3; /* light pink button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+    font-family: 'Playfair Display', serif;
+    }
+    
+    .post-form button:hover,
+    .reply-form button:hover {
+    background-color: #ff4d94; /* darker pink on hover */
+    }
+    
+    /* Forum Post Cards */
+    .forum-post {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    margin-bottom: 25px;
+    }
+    
+    .forum-post h3 {
+    color: #d6336c;
+    margin-top: 0;
+    }
+    
+    .forum-post small {
+    color: #555;
+    display: block;
+    margin-top: 8px;
+    }
+    
+    /* Replies */
+    .replies {
+    margin-top: 15px;
+    padding-left: 20px;
+    border-left: 3px solid #ff80b3;
+    }
+    
+    .reply {
+    background: rgba(255, 230, 245, 0.8);
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    }
+    
+    .reply small {
+    color: #555;
+    }
+    
+    /* No replies */
+    .no-replies {
+    color: #aa4d77;
+    font-style: italic;
+    }
+    
+    /* Responsive */
+    @media (max-width: 600px) {
+    .post-form, .reply-form, .forum-post {
+    padding: 15px;
+    }
+    }
+    
+
+/* Nav Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(255, 255, 255, 0.3); /* glass effect */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 9999;
+  }
+
+  nav .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #880e4f; /* rich pink */
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #880e4f;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+
+  /* Hover Effects */
+  nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.6);
+    color: #ad1457;
+  }
+
+  /* Dropdown */
+  nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    display: none;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 6000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 10px;
+  }
+
+  nav ul li:hover ul {
+    display: block;
+  }
+
+  nav ul li ul li {
+    padding: 5px 20px;
+  }
+
+  nav ul li ul li a:hover {
+    background: rgba(255, 192, 203, 0.5);
+    color: #880e4f;
+  }

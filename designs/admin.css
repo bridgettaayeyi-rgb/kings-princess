@@ -1,0 +1,231 @@
+
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(180deg, #fdecef 0%, #fff6f8 100%);
+    color: #4a3b40;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+    color: #6b3f4f;
+}
+
+h2 {
+    margin-top: 0;
+    color: #6b3f4f;
+}
+
+/* ================= TABS ================= */
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(203, 155, 170, 0.4);
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #6b3f4f;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.tab-btn:hover {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #f6c1cf, #fbe4ea);
+    border-color: #d8a2b3;
+    color: #4a2e36;
+    box-shadow: 0 6px 18px rgba(216, 162, 179, 0.35);
+}
+
+/* ================= TAB CONTENT ================= */
+
+.tab-content {
+    display: none;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= FORMS (CARD STYLE) ================= */
+
+form {
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(220, 170, 185, 0.25);
+    border: 1px solid rgba(220, 170, 185, 0.35);
+    backdrop-filter: blur(12px);
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    border: 1px solid #e3b7c5;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #4a3b40;
+}
+
+form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    outline: none;
+    border-color: #c88fa2;
+    box-shadow: 0 0 0 2px rgba(200, 143, 162, 0.25);
+}
+
+/* ================= BUTTONS ================= */
+
+form button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, #e7a7b8, #c88fa2);
+    box-shadow: 0 8px 22px rgba(200, 143, 162, 0.45);
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(200, 143, 162, 0.6);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        padding: 22px;
+    }
+}
+
+
+
+.admin-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Glassy Card */
+.admin-card {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    border: 1px solid rgba(255,255,255,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.admin-card h3 {
+    color: #880e4f;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.admin-card p {
+    font-size: 0.95rem;
+    color: #5a0033;
+    margin-bottom: 8px;
+}
+
+.admin-card a {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.card-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.card-actions a {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Buttons */
+.edit-btn {
+    background: rgba(255, 182, 193, 0.7);
+    color: #880e4f;
+    max-width: 150px;
+}
+
+.edit-btn:hover {
+    background: #f48fb1;
+}
+
+.delete-btn {
+    background: rgba(194, 24, 91, 0.85);
+    color: #fff;
+    margin-top: 20px;
+    max-width: 150px;
+}
+
+.delete-btn:hover {
+    background: #880e4f;
+}

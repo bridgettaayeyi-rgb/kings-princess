@@ -1,0 +1,194 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #fce4ec;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.4rem;
+    color: #880e4f;
+}
+
+.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 10px auto 40px;
+    font-size: 1.05rem;
+    color: #7a5a72;
+}
+
+
+
+.wallpaper-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 0 40px;
+}
+
+
+
+.wallpaper-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.wallpaper-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =====================
+   Wallpaper Image
+===================== */
+
+.wallpaper-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* =====================
+   Card Info
+===================== */
+
+.wallpaper-info {
+    padding: 16px;
+    text-align: center;
+}
+
+.wallpaper-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #880e4f; 
+}
+
+
+.btn-download {
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: #6c5ce7;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-radius: 20px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-download:hover {
+    background-color: #5945d6;
+    transform: scale(1.05);
+}
+
+
+
+.wallpaper-grid p {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #777;
+}
+
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .wallpaper-grid {
+        padding: 0 20px;
+    }
+}
+/* Nav Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(255, 255, 255, 0.3); /* glass effect */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 9999;
+  }
+
+  nav .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #880e4f; /* rich pink */
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #880e4f;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+
+  /* Hover Effects */
+  nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.6);
+    color: #ad1457;
+  }
+
+  /* Dropdown */
+  nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    display: none;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 6000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 10px;
+  }
+
+  nav ul li:hover ul {
+    display: block;
+  }
+
+  nav ul li ul li {
+    padding: 5px 20px;
+  }
+
+  nav ul li ul li a:hover {
+    background: rgba(255, 192, 203, 0.5);
+    color: #880e4f;
+  }
