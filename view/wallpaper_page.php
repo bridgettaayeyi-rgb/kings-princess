@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Wallpapers - The King's Princess</title>
-    <link rel="stylesheet" href="../designs/wallpapers.css">
+    <link rel="stylesheet" href="designs/wallpapers.css">
 </head>
 <body>
 <?php require __DIR__ . '/features/nav.php'; ?>
