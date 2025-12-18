@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prayer Wall</title>
-<link rel="stylesheet" href="../designs/prayer_wall.css">
+<link rel="stylesheet" href="designs/prayer_wall.css">
 </head>
 <body>
 <?php require __DIR__ . "/features/nav.php"; ?>
