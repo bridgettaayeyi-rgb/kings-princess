@@ -7,7 +7,7 @@ class SignUpController {
     // List of emails allowed to become admin
     private $approvedAdmins = [
         "bridgettaayeyi@gmail.com"
-        "brimay@gmail.com"
+        "briellemay@gmail.com"
     ];
 
     public function __construct() {
